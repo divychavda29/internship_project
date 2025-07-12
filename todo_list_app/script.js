@@ -14,7 +14,7 @@ li.addEventListener("click", () => { li.classList.toggle("completed"); saveTasks
 
 const deleteBtn = document.createElement("button"); deleteBtn.textContent = "❌"; deleteBtn.style.marginLeft = "10px"; deleteBtn.addEventListener("click", (e) => { e.stopPropagation(); taskList.removeChild(li); saveTasks(); });
 
-const editBtn = document.createElement("button"); editBtn.textContent = "✏"; editBtn.style.marginLeft = "10px"; editBtn.addEventListener("click", (e) => { e.stopPropagation(); const newText = prompt("Edit your task:", li.childNodes[0].textContent.trim()); if (newText !== null && newText.trim() !== "") { li.childNodes[0].textContent = newText.trim(); saveTasks(); } });
+const editBtn = document.createElement("button"); editBtn.textContent = "✏️"; editBtn.style.marginLeft = "10px"; editBtn.addEventListener("click", (e) => { e.stopPropagation(); const newText = prompt("Edit your task:", li.childNodes[0].textContent.trim()); if (newText !== null && newText.trim() !== "") { li.childNodes[0].textContent = newText.trim(); saveTasks(); } });
 
 li.appendChild(deleteBtn); li.appendChild(editBtn); taskList.appendChild(li); }
 
